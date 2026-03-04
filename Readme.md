@@ -27,7 +27,7 @@ Sou desenvolvedor **Fullstack** com foco especial em **Frontend**. Gosto de tran
 ## 📌 Projetos em Destaque
 
 ### [🔐 Acesso E](https://acesso-e.vercel.app/)
-Sistema de controle de acesso e autenticação, desenvolvido com React e Node.js.
+Sistema de captação de cliente para Energia Solar, feito em React e Typescript.
 
 ### [🎮 Project Word Game](https://project-word-game.vercel.app/)
 Jogo interativo de palavras para desafiar seu vocabulário – feito com TypeScript e CSS moderno.
@@ -37,14 +37,6 @@ Jogo da memória clássico com um design clean e responsivo, utilizando React.
 
 ### [💰 Bud Budget](https://bud-budget.vercel.app/)
 Aplicativo para gerenciamento de orçamento pessoal, permitindo controle de receitas e despesas de forma simples.
-
----
-
-## 📊 Estatísticas do GitHub
-
-![Um Tio Aí's GitHub stats](https://github-readme-stats.vercel.app/api?username=umtioaii&show_icons=true&theme=radical)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=umtioaii&layout=compact&theme=radical)
 
 ---
 
