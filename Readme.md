@@ -1,4 +1,5 @@
-# Olá, eu sou Um Tio Aí! 👋
+# Olá, eu sou Daniel! 👋
+# Tambem conhecido como UmTioAii 📌
 
 Sou desenvolvedor **Fullstack** com foco especial em **Frontend**. Gosto de transformar ideias em interfaces bonitas, responsivas e funcionais. Estou sempre buscando aprender novas tecnologias e melhorar a experiência do usuário.
 
