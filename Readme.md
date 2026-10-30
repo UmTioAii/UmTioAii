@@ -1,51 +1,61 @@
-# Olá, eu sou Daniel! 👋
-# Tambem conhecido como UmTioAii 📌
+# Daniel Anastácio · UmTioAii
 
-Sou desenvolvedor **Fullstack** com foco especial em **Frontend**. Gosto de transformar ideias em interfaces bonitas, responsivas e funcionais. Estou sempre buscando aprender novas tecnologias e melhorar a experiência do usuário.
+Software engineer building systems around AI agents. My current work is ASTRO, a multi-agent coding harness where every model call is routed by configuration, metered, and recorded in an append-only audit trail. I'm interested in how to make LLM-driven tooling reliable enough to trust: deterministic routing, least-privilege tools, cost governance, and evaluation gates.
 
-🔗 **Portfólio:** [umtioaii.netlify.app](https://umtioaii.netlify.app/)
-
----
-
-## 🛠️ Tecnologias & Ferramentas
-
-**Frontend**  
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-**Backend & Banco de Dados**  
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
+🔗 [Portfolio](https://umtioaii.netlify.app/) ·  · [Email](mailto:09someone29@gmail.com)
 
 ---
 
-## 📌 Projetos em Destaque
+## 🧭 ASTRO
 
-### [🔐 Acesso E](https://acesso-e.vercel.app/)
-Sistema de captação de cliente para Energia Solar, feito em React e Typescript.
+**A local, terminal-first harness for AI coding agents**, built with Bun and TypeScript.
 
-### [🎮 Project Word Game](https://project-word-game.vercel.app/)
-Jogo interativo de palavras para desafiar seu vocabulário – feito com TypeScript e CSS moderno.
+A request becomes a session that plans, reads, writes and executes inside a declared scope. Multiple named agents, each bound to a model or profile, pass work to each other through durable handoffs.
 
-### [🧠 Memo-ry](https://memo-ry.vercel.app/)
-Jogo da memória clássico com um design clean e responsivo, utilizando React.
+**Design principles:** determinism over flexibility · security as a contract · every action auditable · extend, don't recreate.
 
-### [💰 Bud Budget](https://bud-budget.vercel.app/)
-Aplicativo para gerenciamento de orçamento pessoal, permitindo controle de receitas e despesas de forma simples.
+- **The config chooses the model, never the LLM.** Every completion is recorded with its agent, real provider, model, tokens and cost.
+- **Cost governance:** usage is attributed per agent, profile and provider, and checked before each call.
+- **Durable handoffs** with acknowledgement, compare-and-swap and idempotency by handoff ID.
+- **Least privilege:** each agent has its own tool allowlist. Denied calls are audited.
+- **Provider fallback** by priority, retrying only transient errors.
+- **Secrets only from the environment**, redacted from logs, audit records and errors.
+- **Invariants mapped to code and tests** (I-01 to I-22), with a golden-dataset evaluation gate.
+
+**Status:** Phases F0–F7 are complete. Layer 0 (durable handoffs, model pools and profiles, per-agent cost, provider fallback) is in progress. The next layers add skills, MCP support, web tools, a richer TUI and session management. Open issues are tracked on GitHub.
+
+```bash
+npm install -g @umtioai/astro-harness@alpha
+astro
+```
+
+📦 [github.com/UmTioAii/ASTRO](https://github.com/UmTioAii/ASTRO) · MIT License
+
+### 🤝 Contributing
+
+ASTRO is in active development and contributions are welcome. Start with [CONTRIBUTING.md](https://github.com/UmTioAii/ASTRO/blob/main/CONTRIBUTING.md) and [docs/workflow.md](https://github.com/UmTioAii/ASTRO/blob/main/docs/workflow.md). The process is one issue per change, a branch per item, and a pull request with review. Good places to start are the planned layers in [docs/roadmap-complementar.md](https://github.com/UmTioAii/ASTRO/blob/main/docs/roadmap-complementar.md) and the open issues on the repo.
 
 ---
 
-## 📫 Vamos conversar?
+## ⚙️ Languages & Stack
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil-aqui)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seuemail@gmail.com)
+**Languages:** TypeScript (primary), JavaScript, Python, SQL
+**Runtime & tooling:** Bun, Node.js 18+, Ink (terminal UI), Git and GitHub
+**AI & agents:** OpenAI-compatible APIs (NVIDIA NIM, OpenRouter), Codex OAuth, multi-model routing, durable handoffs, golden-dataset evaluation
+**Observability:** OpenTelemetry tracing, Prometheus metrics, append-only JSONL ledger and audit logs
+**Quality & delivery:** Bun test, type checking, secret scanning, CI workflows, ADRs and written invariants
 
 ---
 
-⭐️ **Obrigado pela visita!** Fique à vontade para explorar meus repositórios e entrar em contato.
+## 🛠️ Other work
+
+**[Bud-Budget](https://github.com/UmTioAii/Bud-Budget)**: personal finance app for tracking income and expenses. [Demo](https://bud-budget.vercel.app)
+**[Memo-RY](https://github.com/UmTioAii/Memo-RY)**: responsive memory game in TypeScript. [Demo](https://memo-ry.vercel.app)
+
+---
+
+## 📫 Let's talk
+
+I'm happy to discuss agent architecture, developer tooling, and reliable AI systems. Feedback and contributions to ASTRO are always welcome.
+
+· [Email](mailto:09someone29@gmail.com)
